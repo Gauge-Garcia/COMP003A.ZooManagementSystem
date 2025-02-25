@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-    class Parrot : Animal
+    public class Parrot : Animal
     {
+        public Parrot(string name, string species) : base(name, species)
+        { }
         public override void MakeSound()
         {
-            Console.WriteLine("The Parrot Squak");
+            Console.Write("The Parrot Squawks! ");
         }
     }
 }

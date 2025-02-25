@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP003A.ZooManagementSystem
 {
-    abstract class Animal
+    public abstract class Animal
     {
         private string _name;
         private string _species;
@@ -34,6 +34,12 @@ namespace COMP003A.ZooManagementSystem
                     throw new ArgumentException("Species is required");
                 }
             }
+        }
+
+        public Animal(string name, string species)
+        {
+            Name = name;
+            Species = species;
         }
 
         public abstract void MakeSound();
